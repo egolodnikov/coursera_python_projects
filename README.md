@@ -1,0 +1,1 @@
+Проект, пример использования: Pytest, Fixtures, Selenium
