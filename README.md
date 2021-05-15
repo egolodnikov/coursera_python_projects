@@ -1,7 +1,13 @@
-Проект, пример использования: Pytest, Fixtures, Selenium, Unittest
-test_web.py - запускать с помощью Pytest
-main.py - с помощью Python
-в PATH занести путь к geckodriver.exe для Windows
+## Проект, пример использования:<br/>
+1)  Pytest
+2)  Pytest.fixtures  
+3)  Selenium
+4)  Unittests
+5)  Exceptions
+<br/>
 
-main.py - обычный запуск selenium-скриптов
-test_web.py - запуск Pytest с проверкой assert-ов 
+    
+-   **_unittests_** - примеры для unittests
+-   **_pytest_** - примеры для pytest
+-   **_src_** - примеры Python script-ов
+-   **_exceptions_** - примеры custom Exceptions
