@@ -1,6 +1,6 @@
 import random
 import unittest
-import bubble_sort as bs
+from src import bubble_sort as bs
 
 
 class TestValue(unittest.TestCase):
