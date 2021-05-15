@@ -41,3 +41,25 @@ def test_web_links(web_fix):
         # вероятно связано с тем, что ссылки успевают затираться как-то
         tmp = {url in href for url in urls}
         assert True in tmp
+
+
+def test_account_form(web_fix):
+    web_fix.find_element_by_link_text("Создать Аккаунт Firefox").click()
+    try:
+        element = wait(web_fix, 3).until(
+            EC.presence_of_element_located((By.CLASS_NAME, 'email tooltip-below'))
+        )
+    except Exception as ex:
+        print(ex)
+    text_input = web_fix.find_element_by_tag_name('input')
+    text_input.send_keys('fjordsail@gmail.com')
+    web_fix.find_element_by_id('submit-btn').click()
+    prefill_email = 'none'
+    try:
+        prefill_email = wait(web_fix, 3).until(
+            EC.presence_of_element_located((By.CLASS_NAME, 'prefillEmail'))
+        )
+    except Exception as ex:
+        print(ex)
+
+    assert 'fjordsail@gmail.com' in prefill_email.text
