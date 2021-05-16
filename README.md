@@ -11,3 +11,4 @@
 -   **_pytest_** - примеры для pytest
 -   **_src_** - примеры Python script-ов
 -   **_exceptions_** - примеры custom Exceptions
+-   **_jmeter_example_** - примеры тестирования API с помощью JMeter: POST, GET, PUT, DELETE
